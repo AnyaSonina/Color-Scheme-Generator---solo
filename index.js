@@ -1,6 +1,6 @@
 const inputColor = document.querySelector("#input-color")
 const inputSubmit = document.querySelector("#btn-submit")
-const selectedMode = document.querySelector("#color__selection")
+const selectedMode = document.querySelector("#color-selection")
 const colorBlocks = document.querySelector(".colors-display")
 const colorsHeader = document.querySelector("#colors__header")
 const popUp = document.getElementById("pop-up")
@@ -9,7 +9,7 @@ const container = document.querySelector(".container")
 
 colorsHeader.addEventListener("submit", (event) => {
   event.preventDefault()
-  render()
+  render() 
 })
 
 function render() {
@@ -35,7 +35,6 @@ function render() {
      `     
      
     })
-   
     colorBlocks.innerHTML = colorsHTML
   })
   
@@ -68,31 +67,36 @@ moon.style.display = "none"
 
 
 modeBtn.addEventListener("click", () => {
-
-  const hexCodes = document.querySelectorAll(".hex")
- 
- 
-  if(moon.style.display == "none") {
+ if(moon.style.display == "none") {
     sun.style.display = "inline-block"
-    document.body.style.backgroundColor = "#1F2937"   
-    document.getElementById("input-color").style.backgroundColor = "lightgray"
-    container.style.backgroundColor = "lightgray"
+    document.body.style.background = "#1F2937"   
+    inputColor.style.background = "lightgray"
+    container.style.background = "lightgray"
+    container.style.color = "#1F2937" 
+    modeBtn.style.background = "#FFF"
+    modeBtn.style.borderColor = "#1F2937"
+    inputSubmit.style.background = "#FFF"
+    inputSubmit.style.borderColor = "#1F2937"
+    selectedMode.style.borderColor = "#1F2937"
+    selectedMode.style.background = "#FFF"
     moon.style.display = "inline-block"
     sun.style.display = "none"    
-    hexCodes.forEach(hexCode => {
-     hexCode.style.color = "#1F2937"
-    })
-    
+       
   }else if(moon.style.display == "inline-block"){
-    hexCodes.forEach(hexCode => {
-      hexCode.style.color = "#fff"
-    })
     sun.style.display = "none"
-    document.body.style.backgroundColor = "#fff"
-    document.getElementById("input-color").style.backgroundColor = "#1F2937"
-    container.style.backgroundColor = "#1F2937"
+    document.body.style.background = "#FFF"
+    modeBtn.style.background = "#1F2937"
+    inputColor.style.background = "#1F2937"
+    container.style.background = "#1F2937"
+    container.style.color = "#FFF" 
+    inputSubmit.style.background = "#1F2937"
+    selectedMode.style.background = "#1F2937"
+    inputSubmit.style.borderColor = "#FFF"
+    selectedMode.style.borderColor = "#FFF"
+    modeBtn.style.borderColor = "#FFF"
     moon.style.display = "none"
     sun.style.display = "inline-block"
   }
   
 })
+

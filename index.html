@@ -14,8 +14,11 @@
   <body>
     <div class="container">
       <form id="colors__header">
+        <button id="mode_icon">
+          <i class="fa-regular fa-sun"></i> <i class="fa-solid fa-moon"></i>
+        </button>
         <input type="color" id="input-color" value="#F55A5A" />
-        <select name="mode-picker" id="color__selection">
+        <select name="mode-picker" id="color-selection">
           <option value="monochrome">Monochrome</option>
           <option value="monochrome-dark">Monochrome-dark</option>
           <option value="monochrome-light">Monochrome-light</option>
@@ -26,9 +29,6 @@
         </select>
         <button id="btn-submit">Get Colors</button>
       </form>
-      <button id="mode_icon">
-        <i class="fa-regular fa-sun"></i> <i class="fa-solid fa-moon"></i>
-      </button>
 
       <div class="colors-display">
         <div class="call-to-action">

@@ -14,6 +14,7 @@ body {
   border-radius: 20px;
   min-width: fit-content;
   background: #1F2937;
+  color:#fff;
 }
 
 .mode {
@@ -31,11 +32,11 @@ body {
   min-width:fit-content;
 }
 
-#color__selection,
+#color-selection,
 #btn-submit,
 input {
   background:#1F2937;
-  color: #f5f5f5;
+  color: inherit; 
   border: 2px solid #f5f5f5;
   font-weight: 600;  
 }
@@ -45,17 +46,17 @@ input {
   margin: 0;
 }
 
-#color__selection:hover,
+#color-selection:hover,
 #btn-submit:hover,
 input:hover,
-#color__selection:focus,
+#color-selection:focus,
 #btn-submit:focus,
 input:focus {
   cursor: pointer;
   transform: scale(1.04);
 }
 
-#color__selection {
+#color-selection {
   min-width: 10vw;
   padding: 0 1rem;
   border-radius: 20px;
@@ -110,7 +111,6 @@ input {
 .hex {
   margin-top: 0.5em;
   text-align: center;
-  color: #f5f5f5;
 }
 
 .color-block {
@@ -153,15 +153,19 @@ span {
 
 .fa-moon {
   display: none;
+  color:#1F2937;
 }
 
-.fa-sun, .fa-moon {
+.fa-sun {
   color:yellow;
 }
 
 #mode_icon {
+  display: block;
+  margin: 0 auto;
   margin-bottom: 1em;
   background-color: #1F2937;
+  border:2px dashed  #FFF;
   width: 50px;
   height: 35px;
   border-radius: 5px;
