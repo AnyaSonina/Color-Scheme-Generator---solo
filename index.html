@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6c88a3dc0d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="colors__header">
+        <input type="color" id="input-color" value="#F55A5A" />
+        <select name="mode-picker" id="color__selection">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
+        </select>
+        <button id="btn-submit">Get Colors</button>
+      </form>
+      <button id="mode_icon">
+        <i class="fa-regular fa-sun"></i> <i class="fa-solid fa-moon"></i>
+      </button>
+
+      <div class="colors-display">
+        <div class="call-to-action">
+          Press the <span class="get-colors">Get Colors</span> button 👆
+        </div>
+      </div>
+    </div>
+    <div id="pop-up" class="pop-up"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
