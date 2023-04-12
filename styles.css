@@ -9,10 +9,10 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 30vw;
+  height: fit-content;
   padding: 1rem 2rem;
   border-radius: 20px;
-  min-width: fit-content;
+  width: fit-content;
   background: #1F2937;
   color:#fff;
 }
@@ -169,4 +169,58 @@ span {
   width: 50px;
   height: 35px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width:550px) {
+  .container {
+    height: 80vh;
+  }
+  
+  #colors__header { 
+    display: grid;
+    height: 20%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    " ... color  icon ...  "
+    "choser choser button button";
+  }
+
+  #mode_icon {
+    grid-area: icon;
+  }
+  
+  #input-color {
+    grid-area: color;
+  }
+
+  #color-selection {
+    grid-area: choser;
+  } 
+  
+  #btn-submit {
+    grid-area: button;
+  }
+
+  #colors__header  > #color-selection, #btn-submit {
+    width: 150px;
+    height: 45px;
+  }
+
+  #colors__header  > #mode_icon, #input-color {
+    height: 40px;
+  }
+
+  .colors-display {
+    display: grid; 
+    grid-template-rows:repeat(auto-fit, minmax(20px, 150px));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    align-content: start;
+  }
+
+  .pallete {
+    height: 50%;
+  }
+
 }
