@@ -62,11 +62,11 @@ input {
 input {
   border: none;
   margin: 0;
-  -webkit-appearance: none;
 }
 
 #input-color {
   background-color: transparent;
+  -webkit-border-radius: 0;
 }
 
 #color-selection:hover,
