@@ -80,9 +80,10 @@ input:focus {
 
 #color-selection {
   min-width: 10vw;
-  padding: 0 1rem;
+  padding: 0 1.2rem;
   border-radius: 20px;
   min-width: 10vw;  
+  
 }
 
 .get-colors {
@@ -193,6 +194,8 @@ span {
 @media (max-width:550px) {
   .container {
     height: 80vh;
+    width: 70%;
+    overflow: hidden;
   }
   
   #colors__header { 
@@ -221,7 +224,7 @@ span {
   }
 
   #colors__header  > #color-selection, #btn-submit {
-    width: 150px;
+    max-width: 150px;
     height: 45px;
   }
 
